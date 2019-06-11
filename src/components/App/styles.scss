@@ -1,0 +1,25 @@
+@import '../../stylesheets/colours';
+@import '../../stylesheets/spacing';
+
+$searchBaseLineHeight: 36px;
+$searchBaseFontSize: 36px * .4;
+
+.searchBase {
+  border: 1px solid $inputBorder;
+  box-sizing: border-box;
+  font-size: $searchBaseFontSize;
+  line-height: $searchBaseLineHeight;
+  padding: $baseSpacingS;
+}
+
+.searchInput {
+  width: $baseSpacing * 20;
+  @extend .searchBase;
+}
+
+.searchButton {
+  @extend .searchBase;
+  background-color: $inputBorder;
+  border-left-color: transparent;
+  color: $white;
+}

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should render correctly 1`] = `
+<Fragment>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      className="searchInput"
+      onChange={[Function]}
+      placeholder="search github users"
+      type="text"
+    />
+    <button
+      className="searchButton"
+      type="submit"
+    >
+      Search
+    </button>
+  </form>
+</Fragment>
+`;
+
+exports[`<App /> should update query 1`] = `
+<Fragment>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      className="searchInput"
+      onChange={[Function]}
+      placeholder="search github users"
+      type="text"
+    />
+    <button
+      className="searchButton"
+      type="submit"
+    >
+      Search
+    </button>
+  </form>
+  <UserList
+    query="abc"
+  />
+</Fragment>
+`;
