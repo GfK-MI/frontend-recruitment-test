@@ -1,3 +1,5 @@
+require('dotenv').config();
+import webpack from 'webpack';
 import TerserPlugin from 'terser-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
@@ -66,6 +68,9 @@ export default function (env, arg) {
     },
 
     plugins: [
+      new webpack.DefinePlugin({
+        'process.env.PERSONAL_ACCESS_TOKEN': JSON.stringify(process.env.PERSONAL_ACCESS_TOKEN)
+      }),
       new StylelintWebpackPlugin({}),
       new MiniCssExtractPlugin(),
       new HtmlWebpackPlugin({

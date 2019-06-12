@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {ApolloProvider} from 'react-apollo';
 
+import client from '../../graphql/client';
 import UserList from '../UserList';
 import Style from './styles.scss';
 
@@ -27,7 +29,7 @@ class App extends Component {
   render() {
     const {query} = this.state;
     return (
-      <>
+      <ApolloProvider client={client}>
         <form onSubmit={this.onSubmitForm}>
           <input
             className={Style.searchInput}
@@ -42,7 +44,7 @@ class App extends Component {
           </button>
         </form>
         {query && <UserList query={query} />}
-      </>
+      </ApolloProvider>
     );
   }
 }
