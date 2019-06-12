@@ -1,0 +1,9 @@
+@import '../../stylesheets/colours';
+
+$fontSizeNormal: 12px;
+$fontSizeLarge: 16px;
+
+.baseFont {
+  color: $mainFont;
+  font-family: Arial, Helvetica, sans-serif;
+}

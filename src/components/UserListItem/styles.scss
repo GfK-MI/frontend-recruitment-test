@@ -1,0 +1,65 @@
+@import '../../stylesheets/spacing';
+@import '../../stylesheets/colours';
+@import '../../stylesheets/typogaphy';
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  padding: $baseSpacingS;
+}
+
+.userInformation {
+  align-items: center;
+  display: flex;
+}
+
+.avatarContainer {
+  background-size: cover;
+  height: 150px;
+  margin-right: $baseSpacing;
+  width: 150px;
+}
+
+.userData {
+  @extend .baseFont;
+  font-size: $fontSizeLarge;
+
+  span {
+    display: inline-block;
+    font-weight: bold;
+    min-width: $baseSpacing * 2;
+  }
+}
+
+.contributionsList {
+  @extend .baseFont;
+  font-size: $fontSizeNormal;
+  list-style: none;
+  margin: $baseSpacing 0;
+  padding: 0;
+
+  li {
+    padding: $baseSpacingS;
+
+    a {
+      color: currentColor;
+      display: flex;
+      justify-content: space-between;
+      text-decoration: none;
+      width: 50%;
+    }
+
+    &:hover {
+      background-color: $darkerBgr;
+    }
+  }
+
+  span {
+    display: inline-block;
+
+  }
+
+  .contributionDate {
+    min-width: 160px;
+  }
+}

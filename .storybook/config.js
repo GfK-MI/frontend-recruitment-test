@@ -10,7 +10,7 @@ function loadStories() {
 
 addParameters({
   options: {
-    theme: themes.dark,
+    theme: themes.light,
   },
 });
 configure(loadStories, module);
